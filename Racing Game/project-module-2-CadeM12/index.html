@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sytle.css">
+    <script src="p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <audio src="./audios/clank-car-crash-collision-6206.mp3" id="crash"></audio>
+    <audio src="./audios/gravel-road-6747.mp3" id="gravel"></audio>
+    <audio src="./audios/race-start-beeps-125125.mp3" id="beeps"></audio>
+    <audio src="./audios/Tire Screech - QuickSounds.com.mp3" id="tires"></audio>
+    <audio src="./audios/VEHCar_Car on a road (ID 1286)_BSB.mp3" id="driving"></audio>
+    <title>Racing Game</title>
+</head>
+<body>
+    <div id="titleScreen">
+        <h1>Drifty Racing</h1>
+        <table>
+            <tr>
+                <td>
+                    <button id="play">Play</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="chooseCar">Choose Car</button>
+                </td>
+            </tr>
+        </table>
+       
+        
+        <div id="car">
+        
+        </div>
+    </div>
+    <div id="choosingScreen">
+        <button id="back">Back</button>
+        <div id="search">
+            <h3>Search a car by brand, model, or year</h3>
+            <div id="searchParams">
+                <input type="radio" name="searchParam" value="make" class="radio" id="make">
+                <label for="make">Brand</label>
+                <input type="radio" name="searchParam" value="model" class="radio" id="model">
+                <label for="model">Model</label>
+                <input type="radio" name="searchParam" value="year" class="radio" id='year'>
+                <label for="year">Year</label>
+                <input type="radio" name="searchParam" value="default" class="radio" id='year'>
+                <label for="year">Brand + Model</label>
+            </div>
+            <form id="carSearchForm">
+                <input type="text" value="Search Car" id="searchBar">
+            </form>
+        </div>
+        <div id="generatedCars">
+            <table id="carsTable">
+
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>
